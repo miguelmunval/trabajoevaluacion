@@ -297,6 +297,14 @@ footer a {
 .history-wrapper {
   display: block;
 }
+.fa-arrow-up {position: fixed;
+  bottom: 25px;
+  right: 25px;
+  color: white;
+  border: 2px solid white;
+  padding: 3px;
+  border-radius: 50%;
+}
 #fotos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -334,6 +342,14 @@ margin: 5%;}
   grid-template-columns: repeat(1, 1fr);
   gap: 5px;
   padding: 0px 20px;
+}
+.fa-arrow-up {position: fixed;
+  bottom: 25px;
+  right: 25px;
+  color: white;
+  border: 2px solid white;
+  padding: 3px;
+  border-radius: 50%;
 }
 #contacto{
   font-size: 0.8em;
