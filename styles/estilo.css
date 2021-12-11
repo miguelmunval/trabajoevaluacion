@@ -298,8 +298,8 @@ footer a {
   display: block;
 }
 .fa-arrow-up {position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 25px;
+  right: 25px;
   color: white;
   border: 2px solid white;
   padding: 3px;
@@ -347,8 +347,8 @@ margin: 5%;}
   padding: 0px 20px;
 }
 .fa-arrow-up {position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 25px;
+  right: 25px;
   color: white;
   border: 2px solid white;
   padding: 3px;
