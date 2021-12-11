@@ -1,0 +1,331 @@
+/* Esta será la hoja de estilos usada para mi página sobre los signos del zodiaco. */
+@font-face {
+  font-family: 'title';
+  src: url('../fonts/fofbb_ital.ttf');
+}
+@font-face {
+  font-family: 'texto';
+  src: url('../fonts/Oh\ Whale\ -\ TTF.ttf');
+}
+
+body {background-color: black;
+      color: white;
+      margin: 0;
+      padding: 0;}
+
+#container {width: 80%;
+/*background-color: white;/* luego lo quito */
+margin: auto;}
+/* Estilo nav */
+
+nav {position: sticky;
+top: 0;
+z-index: 99;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  font-family: title;
+  letter-spacing: 0.2em;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #a9c5da;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #0a60a1;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+/* estas media queries estan para que salte el menu antes que se me formen 2 líneas */
+@media screen and (max-width: 850px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/************ Estilo de la hero section **********/
+
+#hero {background-image: url("../images/hero.jpg");
+background-size: cover;/* estira o encoge la imagen para que ocupe el bloque entero */
+background-position: 49%;/* para que recorte por el lado que le indique */
+height: 95vh;/* 100vh sería el alto del dispositivo móvil, tablet o pc */
+position: relative;/* como en halloween, para poder posicionar los rótulos */
+}
+#hero h1 {position: absolute;
+top: 20px;
+left: 50px;
+font-family: title;/* fuente elegida */
+font-size: 1.5em;
+letter-spacing: 0.1em;
+}
+
+.fa-arrow-up {position: fixed;
+bottom: 20px;
+right: 20px;
+color: white;
+border: 2px solid white;
+padding: 3px;
+border-radius: 50%;
+transition: transform 0.5s;
+}
+
+.fa-arrow-up:hover {
+  transform: scale(1.5) rotate(-360deg);
+}
+
+#calltoaction {position: absolute;
+top: 90%;/* como es mucha distancia, y va en función de vh el alto total, lo pongo también con vh */
+left: 40px;
+padding: 10px; /* para que parezca un botón */
+background-color: #a9c5da;
+border-radius: 20px;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 0.8em;
+text-transform: uppercase;/* pone texto en mayúsculas */
+}
+
+#calltoaction:hover{background-color: #796199;
+cursor: pointer;
+}
+/* estilo de la introducción */
+#introduction {font-family: texto;/* font family general */
+color: white;
+padding: 8%;
+text-align: justify;
+}
+
+#introduction h1 {font-family: title;
+text-align: center;
+font-size: 2em;
+}
+#video {width: 50%;/* como es grande, que ocupe solo el 50% */
+float: left;/* Para que el video quede rodeado por el texto */
+margin: 15px;
+}
+
+#introduction p::first-letter {font-size: 1.8em;/* selector nuevo */
+color: #0a60a1;}
+
+/********* estilo de la sección a 2 columnas, en este caso history *********/
+
+#history {font-family: texto;
+color: white;
+border-bottom: 2px solid #0a60a1;
+}
+
+#history h1 {font-family: title;
+font-size: 2em;
+text-align: center;
+}
+
+#history p:first-letter {font-size: 1.8em;
+color: #0a60a1;}
+
+#historia {
+  display: block;
+  margin: auto;
+  padding-top: 90px;
+}
+
+.history-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+/* galeria de imagenes */
+
+#gallery {padding: 0 1%;}
+
+#gallery h1 {font-family: title;
+text-align: center;
+font-size: 2em;
+color: white;
+padding: 30px 0;
+}
+
+#fotos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.foto {
+  padding: 5px;
+  background-color: #0a60a1;
+  box-sizing: border-box;
+  border: 4px solid rgb(79, 155, 61);
+  margin: auto;
+}
+
+.foto img {
+  width: 100%;
+  opacity: 1;
+}
+.foto img:hover {opacity: 0.7;
+}
+.foto h2 {text-shadow: 5px 5px 5px black;
+  text-align: center;
+}
+
+/* Estilo de la sección llamada apartados */
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Color de fondo del botón */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Estilo del panel */
+.panel {
+  padding: 0 18px;
+  background-color: #0a60a1;
+  display: none;
+  overflow: hidden;
+  font-family: texto;
+}
+table {background-color: #0a60a1;
+align-content: center;
+}
+tr {
+  text-align: center;
+}
+
+#apartados h1 {color: white;
+font-family: title;
+font-size: 2em;
+text-align: center;
+}
+#apartados {padding: 30px 5%;}
+
+.imagenpanel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+/* footer */
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  padding: 0px 20px;
+}
+
+.footer-style {
+  padding-top: 50px;
+  background-color: #0a60a1;
+}
+footer {
+color: white;
+}
+footer h3 {
+margin-bottom: 30px;
+  font-weight: 800;
+}
+footer .footer-above {
+padding-top: 50px;
+background-color: #0a60a1;
+}
+footer .footer-col {
+margin-bottom: 50px;
+}
+footer .footer-below {
+padding: 25px 0;
+background-color: #0a60a1;
+}
+
+footer a {
+  color: red;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/********* media queries ********/
+
+@media only screen and (max-width:800px){
+.mitad {width: 100%}
+.history-wrapper {
+  display: block;
+}
+#fotos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+.imagenpanel {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 5px;
+}
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  padding: 0px 20px;
+}
+.cuarto {width: 46%;
+margin: 2%;}
+}
+@media only screen and (max-width:600px) {
+.cuarto {width: 90%;
+margin: 5%;}
+
+.imagenpanel {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 5px;
+  width: 80%;
+}
+.footer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 5px;
+  padding: 0px 20px;
+}
+}
